@@ -1,0 +1,119 @@
+<!-- Lung cancer Prediction -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Lung cancer prediction</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="title">Lung Cancer Survival Prediction</div>
+        <form action="/" method="POST" >
+            <div class="form">
+                <div class="input_field">
+                    <label for="age">Age</label>
+                    <input class="input" type="text" name="age" required>
+                </div>
+                <div class="input_field">
+                    <label for="in_vol">In vol</label>
+                    <input class="input" type="text" name="in_vol" required>
+                </div>
+                <div class="input_field">
+                    <label for="out_vol">Out_vol</label>
+                    <input class="input" type="text" name="out_vol" required>
+                </div>
+
+                <div class="input_field">
+                    <label for="diagnose">Diagnose</label>
+                    <div class = "select">
+                        <select name="diagnose" id="select">
+                            <option value="" selected hidden>Select</option>
+                            <option value="dgn1">DGN 01</option>
+                            <option value="dgn2">DGN 02</option>
+                            <option value="dgn3">DGN 03</option>
+                            <option value="dgn4">DGN 04</option>
+                            <option value="dgn5">DGN 05</option>
+                            <option value="dgn6">DGN 06</option>
+                            <option value="dgn8">DGN 08</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input_field">
+                    <label for="tumour_size">Tumour_size</label>
+                    <div class = "select">
+                        <select name="tumour_size" id="tumour_size">
+                            <option value="" selected hidden>Select</option>
+                            <option value="oc11">OC 11</option>
+                            <option value="oc12">OC 12</option>
+                            <option value="oc13">OC 13</option>
+                            <option value="oc14">OC 14</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="container">   
+                    <div class="checkbox">
+                        <label for="pain">Pain</label>
+                        <input type="checkbox" name="pain">
+                    </div>
+                    <div class="checkbox">
+                        <label for="haemoptysis">Haemoptysis</label>
+                        <input type="checkbox" name="Haemoptysis">
+                    </div>
+                    <div class="checkbox">
+                        <label for="short_breath">Short Breath</label>
+                        <input type="checkbox" name="short_breath">
+                    </div>
+                    <div class="checkbox">
+                        <label for="cough">Cough</label>
+                        <input type="checkbox" name="cough">
+                    </div>
+                    <div class="checkbox">
+                        <label for="weekness">Weekness</label>
+                        <input type="checkbox" name="weekness">
+                    </div>
+                    <div class="checkbox">
+                        <label for="diabetes">Diabetes</label>
+                        <input type="checkbox" name="diabetes">
+                    </div>
+                    <div class="checkbox">
+                        <label for="breathing_difficulty">Breathing Difficulty</label>
+                        <input type="checkbox" name="breathing_difficulty">
+                    </div>
+                    <div class="checkbox">
+                        <label for="other_disease">Other Diseases</label>
+                        <input type="checkbox" name="other_disease">
+                    </div>
+                    <div class="checkbox">
+                        <label for="smoking">Smoking</label>
+                        <input type="checkbox" name="smoking">
+                    </div>
+                    <div class="checkbox">
+                        <label for="asthma">Asthma</label>
+                        <input type="checkbox" name="asthma">
+                    </div>
+                </div class="checkbox">
+    
+                <div class="input_field">
+                    <input class="btn" type="submit" value="Predict Survival">
+                </div>
+            </div>
+        </form>
+
+        <div class="output">
+            {% if pred_value >= 1.5 %}
+                <p>Survive</p>
+            {% elif pred_value > 0 %}
+                <p>Dead</p>
+            {% else %}
+                <p>0</p>
+            {% endif %}
+
+        </div>
+
+    </div>
+</body>
+</html>

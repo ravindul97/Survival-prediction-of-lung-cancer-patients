@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: gray    ;
+    padding: 0 10px;
+}
+.wrap{
+    max-width: 1000px;
+    width: 100%;
+    background: gray;
+    margin: 20px auto;
+    box-shadow: 0px 10px 3px 3px rgba(0,0,0,0.125);
+    padding: 30px;
+}
+  
+.wrap .title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: black;
+    text-align: center;
+}
+  
+.wrap .form{
+    width: 100%;
+}
+  
+.wrap .form .input_field{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+  
+.wrap .form .input_field label{
+     width: 200px;
+     color: rgb(255, 255, 255);
+     margin-right: 15px;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 2;
+    color: rgb(255, 255, 255);
+    column-gap: 50px;
+    align-items: flex-start;
+  }
+.checkbox{
+    display: inline-block;
+    width: 250px;
+    margin: 5px;
+}
+
+.checkbox label{
+    display: block;
+    padding: 0px 10px 0px 0px;
+}
+
+.wrap .form .input_field .input{
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+.wrap .form .input_field .select{
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+  
+.wrap .form .input_field .select:before{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+  
+.wrap .form .input_field .select select{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+}
+
+.wrap .form .input_field .btn{
+    width: 100%;
+    padding: 15px 15px;
+    font-size: 20px; 
+    border: 0px;
+    background:  rgb(255, 255, 255);
+    color: #170d0d;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+  
+.output p{
+    text-align: center;
+    color: rgb(223, 14, 14);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+  
